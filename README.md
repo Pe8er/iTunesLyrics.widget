@@ -1,0 +1,1 @@
+# iTunesLyrics.widget
