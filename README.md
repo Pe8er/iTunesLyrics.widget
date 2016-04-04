@@ -10,9 +10,6 @@ This widget shows embedded lyrics for the currently playing iTunes song.
 
 1. Unzip and copy `iTunesLyrics.widget` folder to `~/Library/Application Support/Übersicht/Widgets` folder.
 1. Play a song in iTunes!
-
-## Todo
-
-- Download lyrics from the web
+2. I totally recommend [Singer Song Reader](http://www.singer-song-reader.com) for downloading lyrics.
 
 [See my other widgets](https://github.com/Pe8er/Ubersicht-Widgets)

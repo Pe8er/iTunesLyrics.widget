@@ -21,6 +21,7 @@ style: """
   opacity 0
   padding 16px
   -webkit-transition height 250ms ease-in-out
+  max-height 95%
 
   .wrapper
     font-size 8pt
@@ -72,5 +73,6 @@ update: (output, domEl) ->
     div.find('.song').html(songName)
     div.find('.lyrics').html(lyrics)
 
-  objHeight = div.find('.wrapper').height()
-  div.css('height', objHeight )
+  wrapHeight = div.find('.wrapper').height()
+  totalHeight = $(window).height()
+  div.css('height', wrapHeight)
