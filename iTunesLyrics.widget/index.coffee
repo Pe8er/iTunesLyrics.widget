@@ -21,7 +21,7 @@ style: """
   opacity 0
   padding 16px
   -webkit-transition height 250ms ease-in-out
-  max-height 95%
+  overflow-y scroll
 
   .wrapper
     font-size 8pt
@@ -74,5 +74,6 @@ update: (output, domEl) ->
     div.find('.lyrics').html(lyrics)
 
   wrapHeight = div.find('.wrapper').height()
-  totalHeight = $(window).height()
+  totalHeight = screen.height
   div.css('height', wrapHeight)
+  div.css('max-height', totalHeight - 48)
