@@ -11,7 +11,7 @@ style: """
   white05 = rgba(white,0.5)
   white02 = rgba(white,0.2)
 
-  width 256px
+  width auto
   height auto
   bottom 0
   left @bottom

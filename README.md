@@ -1,6 +1,6 @@
 # iTunes Lyrics Display for [Übersicht](http://tracesof.net/uebersicht/)
 
-![](https://github.com/Pe8er/iTunesLyrics.widget/blob/master/screenshot.png)
+<img src="https://github.com/Pe8er/iTunesLyrics.widget/blob/master/screenshot.jpg" width="516" height="320">
 
 ## [Download](https://github.com/Pe8er/iTunesLyrics.widget/raw/master/iTunesLyrics.widget.zip)
 
