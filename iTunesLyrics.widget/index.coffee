@@ -2,6 +2,10 @@
 # I stole from so many I can't remember who you are, thank you so much everyone!
 # Haphazardly adjusted and mangled by Pe8er (https://github.com/Pe8er)
 
+options =
+  # Easily enable or disable the widget.
+  widgetEnable  :         true
+
 command: "osascript iTunesLyrics.widget/GetLyrics.applescript"
 
 refreshFrequency: '1s'
@@ -36,6 +40,8 @@ style: """
 
 """
 
+options : options
+
 render: (output) ->
 
   # Initialize our HTML.
@@ -57,23 +63,26 @@ update: (output, domEl) ->
   # Get our main DIV.
   div = $(domEl)
 
-  # Initialize our HTML.
-  lyricsHTML = ''
+  if @options.widgetEnable
+    # Initialize our HTML.
+    lyricsHTML = ''
 
-  if output.length == 0
-    div.animate({ opacity: 0 }, 250)
+    if output.length == 0
+      div.animate({ opacity: 0 }, 250)
+    else
+      metadata = output.split("~")
+      artistName = metadata[0]
+      songName = metadata[1]
+      lyrics = metadata[2]
+
+      div.animate({ opacity: 1 }, 250)
+      div.find('.artist').html(artistName)
+      div.find('.song').html(songName)
+      div.find('.lyrics').html(lyrics)
+
+    wrapHeight = div.find('.wrapper').height()
+    totalHeight = screen.height
+    div.css('height', wrapHeight)
+    div.css('max-height', totalHeight - 48)
   else
-    metadata = output.split("~")
-    artistName = metadata[0]
-    songName = metadata[1]
-    lyrics = metadata[2]
-
-    div.animate({ opacity: 1 }, 250)
-    div.find('.artist').html(artistName)
-    div.find('.song').html(songName)
-    div.find('.lyrics').html(lyrics)
-
-  wrapHeight = div.find('.wrapper').height()
-  totalHeight = screen.height
-  div.css('height', wrapHeight)
-  div.css('max-height', totalHeight - 48)
+    div.hide()

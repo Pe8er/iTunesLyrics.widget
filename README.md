@@ -12,4 +12,14 @@ This widget shows embedded lyrics for the currently playing iTunes song.
 1. Play a song in iTunes!
 2. I totally recommend [Singer Song Reader](http://www.singer-song-reader.com) for downloading lyrics.
 
+## Options
+
+You can easily toggle widget's visibility. Look at the top of `index.coffee`:
+
+```
+options =
+  # Easily enable or disable the widget.
+  widgetEnable: true
+```
+
 [See my other widgets](https://github.com/Pe8er/Ubersicht-Widgets)
