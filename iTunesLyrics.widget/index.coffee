@@ -4,7 +4,7 @@
 
 options =
   # Easily enable or disable the widget.
-  widgetEnable  :         true
+  widgetEnable: false
 
 command: "osascript iTunesLyrics.widget/GetLyrics.applescript"
 
@@ -20,7 +20,7 @@ style: """
   bottom 0
   left @bottom
   position absolute
-  -webkit-backdrop-filter blur(20px) brightness(70%) contrast(120%) saturate(140%)
+  -webkit-backdrop-filter blur(20px) brightness(60%) contrast(130%) saturate(140%)
   font-family system, -apple-system
   opacity 0
   padding 16px
